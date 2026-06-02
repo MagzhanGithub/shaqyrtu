@@ -480,3 +480,21 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
+
+
+// Инициализация карты 2GIS после загрузки скрипта API
+DG.then(function () {
+    // 1. Создаем карту
+    var map = DG.map('map2gis', {
+        center: [42.345348, 69.526457], // Координаты вашей тойханы
+        zoom: 16,                        // Масштаб (чем больше число, тем ближе)
+        fullscreenControl: false,        // Отключаем лишние кнопки по желанию
+        zoomControl: true
+    });
+
+    // 2. Создаем маркер (булавку) на карте
+    var myMarker = DG.marker([42.345348, 69.526457]).addTo(map);
+
+    // 3. Добавляем всплывающее окно при клике на маркер
+    myMarker.bindPopup('<div style="font-family: sans-serif; text-align: center;"><b>777 Тойханасы</b><br>Шымкент</div>');
+});

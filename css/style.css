@@ -344,7 +344,8 @@ ul[role="list"] { list-style: none; }
 }
 
 .hero__amp {
-  font-family: var(--font-serif);
+  font-family: 'Times New Roman', Georgia, serif;
+  /* font-family: var(--font-serif); */
   font-style: italic;
   font-weight: 300;
   color: var(--color-gold);
@@ -1057,7 +1058,7 @@ ul[role="list"] { list-style: none; }
 }
 
 .footer__link {
-  font-size: 13px;
+  font-size: 20px;
   color: rgba(255,255,255,.7);
   transition: color var(--dur-fast);
 }
