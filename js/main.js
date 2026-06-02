@@ -6,7 +6,7 @@
 'use strict';
 
 /* ── CONFIG ─────────────────────────────────── */
-const WEDDING_DATE = new Date('2026-06-18T17:00:00');
+const WEDDING_DATE = new Date('2026-06-20T17:00:00');
 const STORAGE_KEY  = 'shaqyrtu_rsvp';
 const WISHES_KEY   = 'shaqyrtu_wishes';
 

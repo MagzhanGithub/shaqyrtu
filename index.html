@@ -188,15 +188,15 @@
     <section class="section" id="schedule" aria-labelledby="schedule-heading">
       <div class="container">
         <div class="section__header reveal">
-          <p class="section__eyebrow">Той күні</p>
-          <h2 class="section__title" id="schedule-heading">Бағдарлама</h2>
+          <!-- <p class="section__eyebrow">Той күні</p> -->
+          <h2 class="section__title" id="schedule-heading">Той күні</h2>
           <p class="section__subtitle">20 маусым 2026 жыл, сенбі</p>
         </div>
 
         <div class="schedule">
           <div class="schedule__item reveal">
             <div class="schedule__time">
-              <span>12:00</span>
+              <span>11:00</span>
             </div>
             <div class="schedule__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -210,7 +210,7 @@
             </div>
           </div>
 
-          <div class="schedule__item reveal">
+          <!-- <div class="schedule__item reveal">
             <div class="schedule__time">
               <span>14:00</span>
             </div>
@@ -224,11 +224,28 @@
               <h3 class="schedule__title">Неке қию</h3>
               <p class="schedule__desc">Ресми неке рәсімі. Тіркеу органында белгіленген уақытта өтеді.</p>
             </div>
+          </div> -->
+
+          
+
+          <div class="schedule__item reveal">
+            <div class="schedule__time">
+              <span>17:30</span>
+            </div>
+            <div class="schedule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="schedule__content">
+              <h3 class="schedule__title">Беташар</h3>
+              <p class="schedule__desc">Дәстүрлі беташар рәсімі. Жас жұбайлардың ресми таныстыру.</p>
+            </div>
           </div>
 
           <div class="schedule__item reveal">
             <div class="schedule__time">
-              <span>17:00</span>
+              <span>19:00</span>
             </div>
             <div class="schedule__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -238,21 +255,6 @@
             <div class="schedule__content">
               <h3 class="schedule__title">Той басталады</h3>
               <p class="schedule__desc">Мейрамхана есіктері ашылады. Қонақтарды қарсы аламыз.</p>
-            </div>
-          </div>
-
-          <div class="schedule__item reveal">
-            <div class="schedule__time">
-              <span>18:00</span>
-            </div>
-            <div class="schedule__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <div class="schedule__content">
-              <h3 class="schedule__title">Беташар</h3>
-              <p class="schedule__desc">Дәстүрлі беташар рәсімі. Жас жұбайлардың ресми таныстырылымы.</p>
             </div>
           </div>
 
@@ -321,7 +323,7 @@
               </div>
               <div>
                 <p class="venue__label">Мекен-жай</p>
-                <p class="venue__value">Шымкент қ. Алматы тас жолы <br>«777» Тойханасы</p>
+                <p class="venue__value">Шымкент қ. Жиделибайсын көшесі, 90/3<br>«777» Тойханасы</p>
               </div>
             </div>
 
@@ -356,8 +358,8 @@
             <!-- <a href="https://2gis.kz/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
               2GIS
             </a> -->
-            <a href="https://2gis.kz/shymkent/firm/70000001028575394" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
-              2GIS
+            <a href="https://yandex.kz/maps/ru/-/CPT2MY1y" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+              Такси шақыру
             </a>
           </div>
 
@@ -457,7 +459,7 @@
               <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <h3 class="rsvp-confirm__title" id="rsvp-confirm-title">Рақмет!</h3>
-            <p class="rsvp-confirm__text" id="rsvp-confirm-text">Жауабыңызды алдық. Тойда кездесейік!</p>
+            <p class="rsvp-confirm__text" id="rsvp-confirm-text">Жауабыңызды алдық. Тойда кездескенше!</p>
             <button class="btn btn--outline" id="rsvp-reset">Жауапты өзгерту</button>
           </div>
         </div>
@@ -497,7 +499,7 @@
             </div>
 
             <!-- Attendance -->
-            <div class="form-field">
+            <!-- <div class="form-field">
               <fieldset class="form-fieldset">
                 <legend class="form-label">Қатысасыз ба? <span aria-hidden="true">*</span></legend>
                 <div class="radio-group">
@@ -514,7 +516,7 @@
                 </div>
                 <span class="form-error" id="rsvp-attending-error" role="alert" aria-live="polite"></span>
               </fieldset>
-            </div>
+            </div> -->
 
             <!-- Guest count (shown only if attending = yes) -->
             <div class="form-field" id="guests-field" hidden aria-hidden="true">
@@ -557,29 +559,38 @@
     </section>
 
     <!-- ═══════════════════════════════ WISHES ═══════════════════════════════ -->
-    <section class="section" id="wishes" aria-labelledby="wishes-heading">
+    <!-- <section class="section" id="wishes" aria-labelledby="wishes-heading">
       <div class="container">
         <div class="section__header reveal">
           <p class="section__eyebrow">Тілектер</p>
           <h2 class="section__title" id="wishes-heading">Жас жұбайларға тілектер</h2>
         </div>
 
-        <div class="wishes-grid" id="wishes-grid" aria-label="Қонақтардың тілектері">
+        <div class="wishes-grid" id="wishes-grid" aria-label="Қонақтардың тілектері"> -->
           <!-- Wishes rendered by JS -->
-        </div>
+        <!-- </div>
       </div>
-    </section>
+    </section> -->
 
   </main>
 
   <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer__names">Серік & Жансая</div>
-      <div class="footer__date">20 маусым 2026 · Шымкент</div>
-      <p class="footer__note">Сіздерді тойымызда қуана күтеміз</p>
-      <div class="footer__divider" aria-hidden="true"></div>
+      <div class="footer__names">Сіздерді тойымызда қуана күтеміз!</div>
+      <!-- <div class="footer__date">20 маусым 2026 · Шымкент</div> -->
+      <p class="footer__note">Той иелері</p>
+      <!-- <div class="footer__divider" aria-hidden="true"></div> -->
       <div class="footer__contact">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          fill="rgba(255,255,255,.7)"
+          viewBox="0 0 16 16"
+          style="vertical-align: middle;">
+          <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.933c-.197-.099-1.168-.576-1.35-.642-.181-.066-.313-.099-.445.099-.132.197-.511.642-.626.774-.115.132-.23.148-.428.05-.197-.099-.833-.307-1.587-.979-.587-.523-.983-1.168-1.099-1.365-.115-.198-.012-.305.087-.404.089-.089.198-.23.296-.346.099-.115.132-.197.198-.329.066-.132.033-.247-.017-.346-.049-.099-.445-1.074-.61-1.472-.161-.387-.325-.335-.445-.341-.115-.006-.247-.007-.379-.007a.73.73 0 0 0-.527.247c-.181.198-.692.675-.692 1.646s.709 1.909.808 2.041c.099.132 1.397 2.134 3.386 2.991.473.204.842.326 1.129.417.474.151.906.13 1.247.079.38-.057 1.168-.477 1.333-.938.165-.461.165-.857.115-.939-.049-.082-.181-.132-.379-.231z"/>
+      </svg>
+        <span aria-hidden="true">·</span>
         <a href="https://wa.me/77473431336" target="_blank" rel="noopener noreferrer" class="footer__link">Алламұрат</a>
         <span aria-hidden="true">·</span>
         <a href="https://wa.me/77476172886" target="_blank" rel="noopener noreferrer" class="footer__link">Хатима</a>
