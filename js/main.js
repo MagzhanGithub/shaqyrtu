@@ -354,7 +354,6 @@ try {
       if (textEl)  textEl.textContent  = 'Тойда ' + data.guests + ' адаммен келетінді белгіледіңіз. Кездесейік!';
     } else {
       if (titleEl) titleEl.textContent = 'Хабарыңызды алдық';
-      if (textEl)  textEl.textContent  = 'Қаты алмайтыныңыз өкінішті. Ризашылығымызды білдіреміз!';
     }
 
     confirm.scrollIntoView({ behavior: 'smooth', block: 'center' });
