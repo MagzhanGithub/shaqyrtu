@@ -275,30 +275,47 @@ function initRSVP() {
       firstError?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
+const data = {
+  name: nameInput.value.trim(),
+  attending,
+  guests: attending === 'yes' ? guests : '0',
+  message: msgInput?.value.trim() || ''
+};
 
-    /* Simulate async submit */
-    setLoading(true);
-    await delay(1200);
-    setLoading(false);
+try {
 
-    const data = {
-      name:      nameInput.value.trim(),
-      phone:     phoneInput.value.trim(),
-      attending,
-      guests:    attending === 'yes' ? guests : '0',
-      message:   msgInput?.value.trim() || '',
-      timestamp: Date.now(),
-    };
+  setLoading(true);
 
-    saveRSVP(data);
-
-    /* Save wish if message provided and attending */
-    if (data.message && attending === 'yes') {
-      addWish({ name: data.name, text: data.message });
+  const response = await fetch(
+    'https://script.google.com/macros/s/AKfycbzFfKF-42jt6JP5UCCQq396b__DqbM_j9zkz5rn5X_5q84Y2cgMkkpxWy0OdWVWpfv-/exec',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
     }
+  );
 
-    showConfirm(data);
-    renderWishes();
+  const result = await response.json();
+
+  if (!result.success) {
+    throw new Error('Ошибка сохранения');
+  }
+
+  showConfirm(data);
+
+} catch (error) {
+
+  console.error(error);
+  alert('Ошибка отправки анкеты');
+
+} finally {
+
+  setLoading(false);
+
+}
+
   });
 
   resetBtn?.addEventListener('click', () => {
