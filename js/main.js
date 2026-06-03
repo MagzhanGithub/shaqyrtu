@@ -263,16 +263,6 @@ function initRSVP() {
     return true;
   }
 
-  function validateAttendance() {
-    const checked = document.querySelector('input[name="attending"]:checked');
-    const errorEl = document.getElementById('rsvp-attending-error');
-    if (!checked) {
-      if (errorEl) errorEl.textContent = 'Жауапты таңдаңыз';
-      return false;
-    }
-    if (errorEl) errorEl.textContent = '';
-    return true;
-  }
 
   /* Clear error on input */
   form.querySelectorAll('.form-input').forEach(input => {
@@ -293,14 +283,12 @@ function initRSVP() {
     const nameInput  = document.getElementById('rsvp-name');
     const phoneInput = document.getElementById('rsvp-phone');
     const msgInput   = document.getElementById('rsvp-message');
-    const attending  = document.querySelector('input[name="attending"]:checked')?.value;
     const guests     = document.getElementById('rsvp-guests')?.value || '1';
 
     const nameValid   = validateField(nameInput, 'rsvp-name-error', 'Атыңызды енгізіңіз');
     const phoneValid  = validatePhone(phoneInput);
-    const attendValid = validateAttendance();
 
-    if (!nameValid || !phoneValid || !attendValid) {
+    if (!nameValid || !phoneValid) {
       const firstError = form.querySelector('.form-input.error, input[name="attending"]');
       firstError?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
@@ -308,8 +296,7 @@ function initRSVP() {
 const data = {
   name: nameInput.value.trim(),
   phone: phoneInput.value.trim(),
-  attending,
-  guests: attending === 'yes' ? guests : '0',
+  guests,
   message: msgInput?.value.trim() || ''
 };
 
