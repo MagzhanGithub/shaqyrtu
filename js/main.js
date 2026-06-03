@@ -305,22 +305,14 @@ try {
   setLoading(true);
 
   const response = await fetch(
-    'https://script.google.com/macros/s/AKfycby4YDEjT-xE9dlAXiluSj36ge1EnDjfIixEsH3k4wQj7gGI5hlBG4uaSDJkLkbxmSys/exec',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }
-  );
-
-  const result = await response.json();
-
-  if (!result.success) {
-    throw new Error('Ошибка сохранения');
+  'https://script.google.com/macros/s/AKfycby4YDEjT-xE9dlAXiluSj36ge1EnDjfIixEsH3k4wQj7gGI5hlBG4uaSDJkLkbxmSys/exec',
+  {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify(data)
   }
-
+);
+ 
   showConfirm(data);
 
 } catch (error) {
