@@ -1019,7 +1019,7 @@ ul[role="list"] { list-style: none; }
 
 .footer__names {
   font-family: var(--font-serif);
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 300;
   letter-spacing: .05em;
   margin-bottom: var(--sp-2);

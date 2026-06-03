@@ -546,3 +546,22 @@ DG.then(function () {
     // 3. Добавляем всплывающее окно при клике на маркер
     myMarker.bindPopup('<div style="font-family: sans-serif; text-align: center;"><b>777 Тойханасы</b><br>Шымкент</div>');
 });
+
+
+function test() {
+
+  const e = {
+    postData: {
+      contents: JSON.stringify({
+        name: 'Magzhan',
+        phone: '+77001234567',
+        attending: 'yes',
+        guests: '2',
+        message: 'Тестовое сообщение'
+      })
+    }
+  };
+
+  doPost(e);
+
+}
