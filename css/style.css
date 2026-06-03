@@ -1146,3 +1146,28 @@ ul[role="list"] { list-style: none; }
 }
 .lightbox__close:hover { background: rgba(255,255,255,.2); }
 .lightbox__close:focus-visible { outline: 2px solid var(--color-gold); }
+
+
+.music-toggle {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.music-toggle.playing {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

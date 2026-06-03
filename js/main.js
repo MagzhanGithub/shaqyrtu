@@ -82,6 +82,8 @@ function initCountdown() {
 function initNav() {
   const header  = document.querySelector('.site-header');
   const toggle  = document.querySelector('.nav__toggle');
+  const audio = document.getElementById('wedding-audio');
+  let isPlaying = false;
   const menu    = document.querySelector('.nav__menu');
   const navLinks = document.querySelectorAll('.nav__link');
 
@@ -109,10 +111,38 @@ function initNav() {
     document.body.style.overflow = '';
   }
 
-  toggle?.addEventListener('click', () => {
-    const isOpen = menu.classList.contains('open');
-    isOpen ? closeMenu() : openMenu();
-  });
+  // toggle?.addEventListener('click', () => {
+  //   const isOpen = menu.classList.contains('open');
+  //   isOpen ? closeMenu() : openMenu();
+  // });
+  toggle?.addEventListener('click', async () => {
+
+  try {
+
+    if (!isPlaying) {
+
+      await audio.play();
+      toggle.textContent = '❚❚';
+      toggle.classList.add('playing');
+      isPlaying = true;
+
+    } else {
+
+      audio.pause();
+      audio.currentTime = 0;
+      toggle.textContent = '▶';
+      toggle.classList.remove('playing');
+      isPlaying = false;
+
+    }
+
+  } catch (err) {
+
+    console.error(err);
+
+  }
+
+});
 
   overlay.addEventListener('click', closeMenu);
 
@@ -277,6 +307,7 @@ function initRSVP() {
     }
 const data = {
   name: nameInput.value.trim(),
+  phone: phoneInput.value.trim(),
   attending,
   guests: attending === 'yes' ? guests : '0',
   message: msgInput?.value.trim() || ''
@@ -287,7 +318,7 @@ try {
   setLoading(true);
 
   const response = await fetch(
-    'https://script.google.com/macros/s/AKfycbzFfKF-42jt6JP5UCCQq396b__DqbM_j9zkz5rn5X_5q84Y2cgMkkpxWy0OdWVWpfv-/exec',
+    'https://script.google.com/macros/s/AKfycbxIGIGuV-BPYouPSHChN0OwqqZtopCW0zrj7P_Hmms1i9MvF96P2Kl4KwS8AyE15hD7/exec',
     {
       method: 'POST',
       headers: {
