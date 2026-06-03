@@ -318,7 +318,7 @@ try {
   setLoading(true);
 
   const response = await fetch(
-    'https://script.google.com/macros/s/AKfycbyPMMVE3U_gP0V2qqn_WhPWoWoEf7I3W2sY2cux6bUzaua-FYFnRVF7vEXS9CAff9_v/exec',
+    'https://script.google.com/macros/s/AKfycby4YDEjT-xE9dlAXiluSj36ge1EnDjfIixEsH3k4wQj7gGI5hlBG4uaSDJkLkbxmSys/exec',
     {
       method: 'POST',
       headers: {
